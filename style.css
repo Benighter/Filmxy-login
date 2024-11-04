@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/black-panther-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.app {
+    background-color: rgb(255, 255, 255);
+    padding: 3rem;
+    border-radius: .5rem;
+
+}
+
+.title {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    padding: 2.5rem;
+
+}
+
+.title {
+    margin: 0 0 1.5rem;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+}
+
+.login-container input{
+    padding: 1rem 3.2rem;
+    width: 100%;
+    border-radius: 2rem;
+    border: none;
+    margin: .3rem 0;
+    background-color: #e6f0fe;
+    outline: none;
+}
+
+.bi-person-fill {
+    position: relative;
+    top: 0;
+    left: 3rem;
+    margin: 0 1rem 0 0;
+} 
+
+.password{
+    display: flex;
+    align-items: center;
+}
+
+.bi-lock-fill {
+    position: relative;
+    top: 0;
+    left: 3rem;
+    margin: 0 1rem 0 0;
+} 
+
+.login-btn button{
+    padding: 1rem;
+    width: 100%;
+    outline: none !important;
+    border: none;
+    border-radius: 2rem;
+    margin: 1.5rem 0;
+    background-color: #56b847;
+    color: white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.login-btn button:hover {
+    background-color: #2a2621;
+}
+
+
+.google-btn button {
+    background-color: white;
+    border: 1px solid #664fc5;
+}
+.forgot-pw a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #383838;
+    font-size: 14px;
+    margin: 0 0 1rem;
+    transition: .2s ease-in;
+}
+
+.forgot-pw a:hover {
+    color: #56b847;
+    text-decoration: none;
+}
+
+.stroke {
+    color: #bfbfbf;
+    text-align: center;
+    text-decoration: line-through;
+    width: 100%;
+}
+
+.others button {
+    padding: .8rem;
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .7rem 0 0 10%;
+    border-radius: .5rem;
+    border: none;
+}
+
+.guest-btn button {
+    background-color: #faac00;
+    color: white;
+    box-shadow: 0 .2rem 0.1rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.account a {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 0 25%;
+    color: #09649f;
+    border:rem;
+  }
+  
+.account a:after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: 1.4rem;
+    width: 60px;
+    border-bottom: 2px solid #00a1f9;
+  }
