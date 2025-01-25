@@ -3,12 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    
 }
 
-
-
-.background{
+.background {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -18,144 +15,221 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 1rem;
 }
-
-
 
 .app {
     background-color: rgb(255, 255, 255);
-    padding: 3rem;
-    border-radius: .5rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
+.container {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .title {
     font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
 }
 
-.container {
-    background-color: white;
-    padding: 2.5rem;
-
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.title {
-    margin: 0 0 1.5rem;
-}
-
-.username {
+.username, .password {
+    position: relative;
     display: flex;
     align-items: center;
 }
 
-.login-container input{
+.login-container input {
     padding: 1rem 3.2rem;
     width: 100%;
     border-radius: 2rem;
     border: none;
-    margin: .3rem 0;
     background-color: #e6f0fe;
     outline: none;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
 }
 
-.bi-person-fill {
-    position: relative;
-    top: 0;
-    left: 3rem;
-    margin: 0 1rem 0 0;
-} 
-
-.password{
-    display: flex;
-    align-items: center;
+.login-container input:focus {
+    background-color: #d9e8fd;
 }
 
-.bi-lock-fill {
-    position: relative;
-    top: 0;
-    left: 3rem;
-    margin: 0 1rem 0 0;
-} 
+.bi-person-fill, .bi-lock-fill {
+    position: absolute;
+    left: 1.2rem;
+    color: #666;
+}
 
-.login-btn button{
+.login-btn button {
     padding: 1rem;
     width: 100%;
-    outline: none !important;
+    outline: none;
     border: none;
     border-radius: 2rem;
-    margin: 1.5rem 0;
     background-color: #56b847;
     color: white;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
     cursor: pointer;
-    transition: .2s ease-in;
+    transition: 0.2s ease-in;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .login-btn button:hover {
     background-color: #2a2621;
+    transform: translateY(-1px);
 }
 
-
-.google-btn button {
-    background-color: white;
-    border: 1px solid #664fc5;
-}
-.forgot-pw a {
-    display: flex;
-    justify-content: center;
+.forgot-pw {
     text-align: center;
+}
+
+.forgot-pw a {
     color: #383838;
-    font-size: 14px;
-    margin: 0 0 1rem;
-    transition: .2s ease-in;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: 0.2s ease-in;
 }
 
 .forgot-pw a:hover {
     color: #56b847;
-    text-decoration: none;
 }
 
 .stroke {
     color: #bfbfbf;
     text-align: center;
-    text-decoration: line-through;
-    width: 100%;
+    position: relative;
+    margin: 1rem 0;
 }
 
-.others button {
-    padding: .8rem;
-    width: 12rem;
+.stroke::before,
+.stroke::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: #bfbfbf;
+}
+
+.stroke::before {
+    left: 0;
+}
+
+.stroke::after {
+    right: 0;
+}
+
+.others {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: .7rem 0 0 10%;
-    border-radius: .5rem;
+    gap: 1rem;
+}
+
+.others button {
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 0.5rem;
     border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .guest-btn button {
     background-color: #faac00;
     color: white;
-    box-shadow: 0 .2rem 0.1rem rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.google-btn button {
+    background-color: white;
+    border: 1px solid #664fc5;
+    color: #664fc5;
+}
+
+.guest-btn button:hover,
+.google-btn button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.account {
+    text-align: center;
+    margin-top: 1.5rem;
 }
 
 .account a {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    text-decoration: none;
-    margin: 0 0 0 25%;
     color: #09649f;
-    border:rem;
-  }
-  
-.account a:after {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+}
+
+.account a::after {
     content: "";
     position: absolute;
-    left: 30%;
-    top: 1.4rem;
-    width: 60px;
-    border-bottom: 2px solid #00a1f9;
-  }
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00a1f9;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.account a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .app {
+        padding: 1.5rem;
+    }
+
+    .container {
+        padding: 0.5rem;
+    }
+
+    .login-container input {
+        padding: 0.875rem 3rem;
+    }
+
+    .others button {
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .app {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .login-container input {
+        padding: 0.75rem 2.8rem;
+        font-size: 0.875rem;
+    }
+}
